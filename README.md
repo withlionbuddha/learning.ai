@@ -1,10 +1,9 @@
 # learning.ai
 
-I am learning ai
+🔅 I am learning ai
 
 👋 Hi, I’m @withlionbuddha 
 👀 I’m interested in ... 
-🔅 I’m currently learning ai 
 💞️ I’m looking to collaborate on ... 
 📫 How to reach me ... 
 😄 Pronouns: Lion 
