@@ -21,11 +21,11 @@ class DataAnalyzer:
         if self.df is None:
             raise ValueError("DataFrame이 생성되지 않았습니다. 먼저 create_dataframe() 메서드를 호출하세요.")
 
-        print("DataFrame Info")
+        print("----- DataFrame Info ----]")
         print(self.df.info())
-        print("\n DataFrame descibe")
+        print("\n [---- DataFrame Descibe ----]")
         print(self.df.describe())
-        print("\n DataFrame head")
+        print("\n[----  5 Rows ----]")
         print(self.df.head())
 
   
