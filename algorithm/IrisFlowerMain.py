@@ -5,7 +5,7 @@
 
 
 from IrisFlowerFactory import IrisFlowerFactory
-from gaussianmixtrue.GMMClustering import GMMClustering
+from gaussianmixture.GMMClustering import GMMClustering
 from Visualizer import Visualizer
 from DataAnalyzer import DataAnalyzer
 from sklearn import datasets
