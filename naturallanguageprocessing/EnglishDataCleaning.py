@@ -20,8 +20,8 @@ class EnglishDataCleaning(DataCleaning):
         # 영어는 대소문자 통일
         return self.text.lower()
 
-
-# In[ ]:
+    def get_text(self):
+        return self.text
 
 
 

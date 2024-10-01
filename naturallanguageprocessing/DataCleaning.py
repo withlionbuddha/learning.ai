@@ -20,10 +20,10 @@ class DataCleaning(ABC):
     @abstractmethod
     def to_lowercase(self):
         pass
-
-
-# In[ ]:
-
+    
+    @abstractmethod
+    def get_text(self):
+        return self.text
 
 
 
