@@ -1,0 +1,9 @@
+# To build this project, you need Microsoft C++ Build Tools.
+# Download from: https://visualstudio.microsoft.com/visual-cpp-build-tools/
+
+torchvision
+
+#Numpy
+numpy==2.0.2
+
+certifi
