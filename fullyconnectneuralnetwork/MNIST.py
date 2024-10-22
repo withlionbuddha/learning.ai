@@ -36,7 +36,7 @@ def load_mnist_data():
     if x_train.dim() >= 2:
       x_train = x_train.view(batch_size, -1) #-1? 첫번째 차원은 유지, 나머지 차원은 하나의 차원으로 flatten.
     
-    inputs = x_train.numpy()
+    inputs = x_train.numpy() # 이미지나 다른 데이터는 신경망에 입력하기 전에 배열(numpy)로 변환하여 처리
     labels = labels.numpy()  # 레이블을 numpy 배열로 변환    
 
     return inputs, labels

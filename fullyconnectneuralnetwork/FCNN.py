@@ -14,20 +14,20 @@ class FCNN:
         self.output_layer:OutputLayer = None
 
     @chainable_method
-    def addHiddenLayer(self, number_of_neurons:int, number_of_inputs:int ,activation_fn=None) -> None :
+    def addHiddenLayer(self, number_of_neurons:int, number_of_input:int ,activation_fn=None) -> None :
         self.hidden_layers.append(
             HiddenLayer(
                 "hiddenlayer_"+ str(len(self.hidden_layers))
                 , number_of_neurons
-                , number_of_inputs
+                , number_of_input
                 , activation_fn
             ))
         
     @chainable_method
-    def addOutputLayer(self, number_of_neurons:int, number_of_inputs:int , activation_fn=None) :
+    def addOutputLayer(self, number_of_neurons:int, number_of_input:int , activation_fn=None) :
         self.output_layer = OutputLayer(
                 number_of_neurons
-                , number_of_inputs
+                , number_of_input
                 , activation_fn)
         return self
     

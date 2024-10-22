@@ -3,7 +3,7 @@ import MNIST
 from FCNN import FCNN
 import ActivationFunction as af
 import CostFunction as cf
-import GradientDescent as gd
+import Optimizer as optimizer
    
 class FCNNMultiClassClassifier:
     def __init__(self):
@@ -35,15 +35,15 @@ class FCNNMultiClassClassifier:
             cost = cf.CostFunction(labels, self.fcnn.get_output_layer().get_number_of_neurons())
             cost.calculate(self.fcnn.get_output_layer())
             
-            gradient = gd.GradientDescent()
+            gradient = optimizer.GradientDescent()
             gradient.step(self.fcnn, cost)
             
             if epoch % 1000 == 0:
                 print(f'Epoch {epoch + 1}, Loss: {cost.get_loss()}, accuracy: {cost.get_accuracy()}, step: {gradient.get_step_count()}')
 
-    def predict(self, inputs):
+    def predict(self, MULTIPLE_INPUTS):
         # 예측 함수 호출
-        return self.fcnn.forward_propagation(inputs)
+        return self.fcnn.forward_propagation(MULTIPLE_INPUTS)
 
     @staticmethod
     def main():
@@ -51,10 +51,10 @@ class FCNNMultiClassClassifier:
         # FCNNMultiClassClassifier 객체 생성
         multiclassifier = FCNNMultiClassClassifier()
         
-        inputs, labels = MNIST.load_mnist_data()
-        multiclassifier.dataload(inputs, labels)
+        MULTIPLE_INPUTS, labels = MNIST.load_mnist_data()
+        multiclassifier.dataload(MULTIPLE_INPUTS, labels)
         multiclassifier.createFCNN()
-        multiclassifier.train(inputs, labels, epochs=5)
+        multiclassifier.train(MULTIPLE_INPUTS, labels, epochs=5)
 
         # 테스트 입력 데이터 불러오기 (MNIST 데이터)
         #test_input, _ = load_mnist_data()

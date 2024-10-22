@@ -2,10 +2,10 @@ import numpy as np
 from OutputLayer import OutputLayer
 
 class CostFunction() :
-    def __init__(self, labels:np.ndarray, number_of_inputs:int):
+    def __init__(self, labels:np.ndarray, number_of_input:int):
         self.labels:np.ndarray = labels
         self.accuracy:float = 0.0
-        self.errors:np.ndarray = np.zeros(number_of_inputs)
+        self.errors:np.ndarray = np.zeros(number_of_input)
         self.loss:float = 0.0
         
     def calculate(self, output_layer:OutputLayer) -> np.ndarray:
